@@ -17,6 +17,7 @@ function isNanTrue() {
 
 function isNanFalse() {
   document.getElementById("isnanFalse").innerHTML = isNaN("33"); //Declared a function and are changing the specified element's inner text to the value of using the isNan function to return a boolean value.//
+}
 
 function infinity() {
   document.getElementById("infinity").innerHTML = 2e310; //Declared a function and are changing the specified element's inner text to the value of infinity.//
@@ -28,6 +29,7 @@ function neginf() {
 
 function lessThan() {
   document.getElementById("lessThan").innerHTML = 3 < 5; //Declared a function and are changing the specified element's inner text to the returned value of 3 < 5.//
+}
 
 function greaterThan() {
   document.getElementById("greaterThan").innerHTML = 4 > 10; //Declared a function and are changing the specified element's inner text to the returned value of 4 > 10.//
