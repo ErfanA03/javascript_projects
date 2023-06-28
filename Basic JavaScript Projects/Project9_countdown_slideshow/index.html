@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SlideShow!</title>
+    <link rel="stylesheet" type="text/css" href="CSS/main.css" />
+  </head>
+  <body>
+    <!--TIMER SECTION-->
+    <p>How many seconds would you like to set your alarm for?</p>
+    <input id="seconds" value="" />
+    <button onclick="countdown()">Click here</button>
+    <p id="timer"></p>
+    <!--END TIMER SECTION-->
+
+    <!--SLIDESHOW SECTION-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <!--IMAGE 1-->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="images/cars/car1.jpg" />
+        <div class="text">1965 Ford Cobra</div>
+      </div>
+      <!--IMAGE 2-->
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/cars/car2.jpg" />
+        <div class="text">1960-1970 MG MGB</div>
+      </div>
+      <!--IMAGE 3-->
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/cars/car3.jpg" />
+        <div class="text">1970's Chevrolet Chevelle</div>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <!-- The dots/circles -->
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+    <!--END SLIDESHOW SECTION-->
+
+    <script src="JS/main.js"></script>
+  </body>
+</html>
