@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="JavaScript/JavaScript_3.js" defer></script>
+  </head>
+  <body>
+    <h1>Animals</h1>
+    <h3>Click on an animal to view its species!</h3>
+
+    <ul>
+      <li
+        onclick="displayType(this)"
+        id="dog"
+        data-animal_species="canis lupus familiaris"
+      >
+        Dogs
+      </li>
+      <li
+        onclick="displayType(this)"
+        id="cat"
+        data-animal_species="felis catus"
+      >
+        Cats
+      </li>
+      <li
+        onclick="displayType(this)"
+        id="horse"
+        data-animal_species="equus caballus"
+      >
+        Horses
+      </li>
+      <li
+        onclick="displayType(this)"
+        id="chameleon"
+        data-animal_species="chamaeleonidae"
+      >
+        Chameleons
+      </li>
+    </ul>
+    <div id="message"></div>
+  </body>
+</html>
