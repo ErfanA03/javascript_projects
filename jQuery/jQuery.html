@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery</title>
+    <!--links or references the jQuery library so that we can actually pull code from the library-->
+    <script src="JS/jquery-3.7.0.js"></script>
+  </head>
+  <!--Script tag utilizing jQuery to append content to the end of the html element whenever the website is loaded or "ready"-->
+  <!--We also utilized jQuery to style some of the paragraph elements and to make the h1 dissapear when the third paragraph is clicked upon.-->
+  <script>
+    $(document).ready(function () {
+      $("html").append(
+        "<body>\
+                <div id='container'>\
+                    <div id='inner'>\
+                        <h1>Basic jQuery</h1>\
+                        <p id='1'>Paragraph 1</p>\
+                        <p id='2'>Paragraph 2</p>\
+                        <p id='3'>Paragraph 3</p>\
+                    </div>\
+                </div>\
+            </body>"
+      );
+      $("#2, #3").css({ color: "red" });
+      $("#3").click(function () {
+        $("h1").hide();
+      });
+    });
+  </script>
+</html>

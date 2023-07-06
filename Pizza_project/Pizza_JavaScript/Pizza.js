@@ -35,7 +35,7 @@ function getReceipt() {
 
 //It also displays text that shows what items the user picked(i.e
 //size of pizza and toppings) as well as the total amount in dollars
-//that the pizza will cost.
+//that the pizza will cost.q
 function getTopping(runningTotal, text1) {
   var toppingTotal = 0;
   var selectedTopping = [];
