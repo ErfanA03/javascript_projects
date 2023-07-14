@@ -1,0 +1,131 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#vw-heading {
+  font-size: 7vw;
+}
+
+#vw-paragraph {
+  font-size: 2.5vw;
+}
+
+#contactButton {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: yellow;
+  padding: 30px;
+  font-size: 18px;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInAnimation 1s ease-in forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#contactFormPopup {
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#contactFormPopup.show {
+  display: block;
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#contactForm {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#contactForm label,
+#contactForm input {
+  display: block;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#contactForm input[type="submit"] {
+  width: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+#contactFormPopup {
+  width: 300px;
+  position: relative;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 200px;
+  }
+}
+
+@keyframes zoominoutsinglefeatured {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.image-header img {
+  animation: zoominoutsinglefeatured 15s forwards;
+}
+
+#section1 {
+  height: 600px;
+  background-color: pink;
+}
+
+#section2 {
+  height: 600px;
+  background-color: yellow;
+}
+/*Slide show ------- */
+#slideshow {
+  margin: 80px auto;
+  position: relative;
+  width: 240px;
+  height: 240px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+}
+/*Slide show ------- */

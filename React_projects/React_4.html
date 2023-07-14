@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="CSS/React_4.css" />
+    <!--THIS IS REFERENCING REACT SO THAT WE CAN ACTUALLY USE IT WITHIN OUR CODE.-->
+    <script src="React_4.js" defer></script>
+    <!--THIS IS REFERENCING jQUERY SO THAT WE CAN ACTUALLY USE IT WITHIN OUR CODE.-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body class="fade-in">
+    <h1 id="vw-heading">Hello World</h1>
+    <button id="contactButton">Contact Us</button>
+    <p id="vw-paragraph">
+      Resize the browser window to see how the font size scales.
+    </p>
+
+    <!-- The form -->
+    <div id="contactFormPopup">
+      <form
+        id="contactForm"
+        name="myForm"
+        action=""
+        onsubmit="return validateForm()"
+        method="post"
+      >
+        <fieldset>
+          <legend>Enter Your Contact Information:</legend>
+
+          <label for="fname">First Name:</label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            placeholder="First Name..."
+          /><br />
+
+          <label for="lname">Last Name:</label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            placeholder="Last Name..."
+          /><br />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Email..."
+          /><br />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Phone Number..."
+            required
+            pattern="[0-9]{10}"
+          />
+          <br />
+
+          <input type="submit" value="Submit" />
+        </fieldset>
+      </form>
+    </div>
+    <!--END FORM SECTION-->
+
+    <!-- SMOOTH SCROLL -->
+    <div class="main" id="section1">
+      <h2>Section 1</h2>
+      <p>Click on the link to see the "smooth" scrolling effect.</p>
+      <a href="#section2">Click Me to Smooth Scroll to Section 2 Below</a>
+      <p>
+        Note: Remove the scroll-behavior property to remove smooth scrolling.
+      </p>
+    </div>
+
+    <div class="main" id="section2">
+      <h2>Section 2</h2>
+      <a href="#section1">Click Me to Smooth Scroll to Section 1 Above</a>
+    </div>
+    <!-- END SMOOTH SCROLL -->
+
+    <!--ZOOM IN/OUT-->
+    <div class="image-header">
+      <img src="images/nature.jpeg" alt="Image of nature" />
+    </div>
+    <!--END ZOOM IN/OUT-->
+
+    <!--SLIDESHOW-->
+    <div id="slideshow">
+      <div>
+        <img src="https://assets.codepen.io/9632/dog.jpg" />
+      </div>
+      <div>
+        <img src="https://assets.codepen.io/9632/plant.jpg" />
+      </div>
+      <div>
+        Pretty cool eh? This slide is proof the content can be anything.
+      </div>
+    </div>
+    <!--END SLIDESHOW-->
+    <script>
+      $("#slideshow > div:gt(0)").hide();
+
+      setInterval(function () {
+        $("#slideshow > div:first")
+          .fadeOut(1000)
+          .next()
+          .fadeIn(1000)
+          .end()
+          .appendTo("#slideshow");
+      }, 3000);
+    </script>
+  </body>
+</html>
